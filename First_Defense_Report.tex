@@ -13,6 +13,7 @@
 \usepackage{eurosym}
 
 \usepackage{multirow}
+\usepackage{datetime}
 
 \usepackage{titlesec}
 
@@ -28,7 +29,7 @@
 \definecolor{darkgreen}{RGB}{0,130,0}
 \definecolor{darkblue}{RGB}{0,0,130}
 
-\newcommand{\gameName}{Lands of Azerith}
+\newcommand{\gameName}{\textit{Lands of Azerith}\ }
 \newcommand{\companyName}{Stonks Industries}
 % \newcommand{\progressbar}[1]{
 %     \begin{tikzpicture}
@@ -116,6 +117,9 @@
 \subsection{Histoire}
 \input{2.game/story.tex}
 
+\subsection{Son et musique}
+\input{2.game/sound.tex}
+
 \subsection{Site web}
 \input{2.game/website.tex}
 
@@ -127,5 +131,14 @@
 \newpage
 \section{Conclusion}
 \input{0.format/conclusion.tex}
+
+% Logo of the company
+\centering
+\vspace*{1.8cm}
+\includegraphics[width=3cm]{0.format/logo.png}
+
+% Day and time of the last update
+\vspace*{1cm}
+Last updated on \today{} at \currenttime.
 
 \end{document}
