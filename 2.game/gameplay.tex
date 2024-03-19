@@ -65,16 +65,16 @@ Ensuite, le comportement d'une créature va brancher en quatre catégories disti
 - Le PNJ Peureux va fuir lorsqu'il est à proximité du joueur.
 \\
 
+Pour la détection du joueur, nous allons utiliser la fonctionnalité des signaux de Godot, et initier deux zones de détection circulaire autour de chaque monstre.
+La première servira à détecter lorsque le joueur rentre dans cette zone (zone d'aggro), et la deuxième, un peu plus grande, qui détectera la sortie du joueur de cette zone (zone de déaggro), et qui repassera le PNJ dans l'état \textit{Wander}.
+On ne veut pas qu'il fuit ou qu'il attaque le joueur pendant toute la durée de la partie (c.f. Figure \ref*{fig:gameplay6}).
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{2.game/assets/gameplay6.png}
     \caption{PNJ Agressif, avec ses zones d'\textit{aggro} et de \textit{déaggro}}
     \label{fig:gameplay6}
 \end{figure}
-
-Pour la détection du joueur, nous allons utiliser la fonctionnalité des signaux de Godot, et initier deux zones de détection circulaire autour de chaque monstre.
-La première servira à détecter lorsque le joueur rentre dans cette zone (zone d'aggro), et la deuxième, un peu plus grande, qui détectera la sortie du joueur de cette zone (zone de déaggro), et qui repassera le PNJ dans l'état \textit{Wander}.
-On ne veut pas qu'il fuit ou qu'il attaque le joueur pendant toute la durée de la partie (c.f. Figure \ref*{fig:gameplay6}).
 
 
 \subsubsection*{Les quêtes, les classes, l'inventaire et la sauvegarde}
