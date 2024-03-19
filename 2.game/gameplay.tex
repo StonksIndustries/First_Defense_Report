@@ -3,8 +3,8 @@
 \subsubsection*{Le Multijoueur}
 
 Pour pouvoir organiser une partie multijoueur, nous avons décidé d'utiliser l'API intégrée à Godot.
-Pour pouvoir organiser une partie en multijoueur, il nous faut un serveur, ici l'hôte, ainsi que les joueurs qui rejoignent sa partie appelés les clients,
-En premier temps, l'hôte doit choisir quel port souhaite-t-il utiliser pour sa partie, puis les joueurs doivent accéder à l'adresse de l'hôte, ainsi que le port précédemment choisi (cf Figure \ref{fig:gameplay1} et \ref*{fig:gameplay2}).
+Pour cela, il nous faut un serveur, ici l'hôte, ainsi que les joueurs qui rejoignent sa partie appelés les clients,
+En premier temps, l'hôte doit choisir quel port il souhaite utiliser pour sa partie, puis les joueurs doivent accéder à l'adresse de l'hôte, ainsi que le port précédemment choisi (cf Figure \ref{fig:gameplay1} et \ref*{fig:gameplay2}).
 
 \begin{figure}[H]
     \centering
@@ -21,6 +21,8 @@ En premier temps, l'hôte doit choisir quel port souhaite-t-il utiliser pour sa 
 \end{figure}
 
 Il est possible de jouer avec un nombre infini de joueurs, mais nous avons établi un maximum de 8, limite que nous utiliserons lors de la conception du reste du jeu.
+\\
+
 Maintenant que la connexion est établie entre les différents joueurs, il nous faut synchroniser les informations entre l'hosts et les différents clients, tout en faisant attention à ne pas trop partager d'informations inutiles, afin de limiter l'utilisation de bande passante.
 Par exemple, la synchronisation des positions de chacun entre tous les joueurs est importante, mais la position de la caméra de chaque joueur n'est nécessaire qu'en local (c.f. Figures \ref*{fig:gameplay3} et \ref*{fig:gameplay4}).
 
